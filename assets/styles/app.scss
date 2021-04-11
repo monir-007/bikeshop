@@ -1,0 +1,136 @@
+$baseline : 24px;
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.margin{
+    margin: 2px;
+}
+footer{
+    background-color: lightblue;
+    padding: $baseline;
+
+    hr{
+    display: none;
+    }
+}
+
+header{
+    background-color: lightblue;
+    padding: $baseline;
+    font-size: 300%;
+
+    a {
+        background-color: #638C99;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 60%;
+        text-decoration: none;
+        padding: 6px 12px 8px 12px;
+        cursor: pointer;
+    }
+
+    a:hover, a:active {
+        background-color: #4D6066;
+    }
+    hr{
+        display: none;
+    }
+}
+
+main {
+    padding: $baseline;
+    margin: 1rem 1.5rem 1rem 1.5rem;
+    .breadcrumbs {
+        a:link, a:visited, a:active {
+            color: lightseagreen;
+            font-size: 1.25rem;
+        }
+        a:hover{
+            color: crimson;
+        }
+    }
+    h1{
+        margin-top: 0;
+    }
+    img{
+        max-width: 100%;
+    }
+    .product-list{
+        display: grid;
+        grid-gap: ($baseline/2);
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        div{
+            text-align: center;
+        }
+        a:link, a:visited{
+            color: black;
+            text-decoration: none;
+        }
+        a:hover, a:active{
+            color: #666;
+        }
+    }
+}
+form{
+    button{
+        background-color: #638C99;
+        border: #638C99 1px solid;
+        border-radius: 0;
+        color: #fff;
+        font-size: 100%;
+        padding: 15px 15px 16px 15px;
+        cursor: pointer;
+    }
+    button:hover, button:active {
+        background-color: #2E5866;
+        border-color: #2E5866;
+    }
+
+    button:disabled {
+        background-color: #997754;
+        border-color: #997754;
+        color: #E6C9AC;
+    }
+}
+
+.basket {
+    align-items: center;
+    display: grid;
+    grid-gap: $baseline;
+    grid-template-columns: 100px 2fr 1fr 1fr;
+    max-width: 600px;
+
+    img {
+        max-width: 100px;
+    }
+
+    .total {
+        font-weight: bold;
+    }
+}
+.basket-form {
+    margin-top: $baseline;
+}
+
+div#form {
+    margin-top: ($baseline / 2);
+    max-width: 500px;
+
+    input, textarea {
+        box-sizing: border-box;
+        margin-bottom: ($baseline / 2);
+        padding: ($baseline / 2);
+        width: 100%;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+}
