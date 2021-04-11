@@ -1,0 +1,10 @@
+
+{% block header %}
+    <header>
+    Bike Shop
+    {% if app.session.get('basket') %}
+        <a href="/basket" class="basket-btn">View basket</a>
+    {% endif %}
+    <hr>
+    </header>
+{% endblock %}
