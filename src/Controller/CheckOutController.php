@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Orders;
+use App\Form\CheckoutType;
 use App\Repository\ProductRepository;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -35,14 +36,7 @@ class CheckOutController extends AbstractController
         }, $basket));
         $order = new Orders;
 
-        $form = $this->createFormBuilder($order)
-            ->add('name', TextType::class)
-            ->add('email', TextType::class)
-            ->add('address', TextareaType::class)
-            ->add('save', SubmitType::class, [
-                'label' => 'Confirm Order'
-            ])
-            ->getForm();
+        $form = $this->createForm(CheckoutType::class, $order);
 
         $form->handleRequest($request);
 
